@@ -80,25 +80,137 @@
 
 
 <main role="main">
-    {{ page.content }}
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-      </div>
+    <div class="">
+    {{ page.frontpage_carousel }}
+    </div>    
+    
+    <div class="">
+    {{ page.frontpage_announcement }}
     </div>
     
+    <div class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="px-2 py-5 bg-success">
+                    <h3>Events</h3>
+                    {{ page.frontpage_one }}
+                    </div>
+                </div>                
+                <div class="col-md-4">
+                    <div class="px-2 py-5 bg-primary">
+                        <h3>News</h3>
+                        {{ page.frontpage_two }}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="px-2 py-5 bg-dark">
+                        <h3>Featured courses</h3>
+                        {{ page.frontpage_three }}
+                    </div>
+                </div>                    
+            </div>
+        </div>
+    </div>
+                    
+    <div class="py-5 bg-secondary">
+        <div class="container">
+{#            
+            <div class="row">
+                <div class="col-md-4">
+                </div>                
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                </div>                    
+            </div>
+#}            
+            <div class="card-deck">
+                <div class="card col-md-4 bg-light rounded-0 mx-5 shadow-sm" style="width: 18rem; height:22rem;">
+                    <div class="card-body">
+                        <h2>Library of French Thought</h2>
+                    </div>
+                </div>
+                <div class="card col-md-4 bg-light rounded-0 mx-5 shadow-sm" style="width: 18rem; height:22rem;">
+                    <div class="card-body">
+                        <h2>Study Abroad</h2>
+                    </div>
+                </div>
+                <div class="card col-md-4 bg-light rounded-0 mx-5 shadow-sm" style="width: 18rem; height:22rem;">
+                    <div class="card-body">
+                        <h2>Books</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>                    
 
-    <footer class="container">
-      <p class="float-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    
+
+    <!-- end of fifth banner -->
+    <footer class="" id="footer">
+        
+        <div class="" id="footer-top">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <p>Subscribe to<br>
+                            Our Email List<p>
+                            </div>
+                            <div class="col-8">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control rounded-0" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-secondary rounded-0" type="button">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>                            
+                    </div>
+                    <div class="col-sm-4">
+                        <h5><button type="button" class="btn btn-outline-secondary btn-lg btn-block rounded-0">Make A Gift</button></h5>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>Facebook | Twitter</p>                    
+                    </div>              
+                </div>
+            </div> 
+        </div>
+        
+        <div class="bg-info" id="footer-middle">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p>French Department<br>
+                        4125 Dwinelle Hall<br>
+                        University of California, Berkeley<br> 
+                        Berkeley, CA 94720-2580<br>
+                        P:(510) 642-2712<br> 
+                        F:(510) 642-8852<br>
+                        E: clfa_aa@berkeley.edu</p>
+                    </div>
+                    <div class="col-sm-5">
+                        {{ page.footer_two }}
+                    </div>
+                    <div class="col-sm-3">
+                        <div id="berkeley-text-logo">
+                            <img src="https://as.ugis.berkeley.edu/wp-content/uploads/2018/09/UCBerkeley_wordmark_white.png" alt="berkeley logo" width="200">
+                        </div>                    
+                    </div>              
+                </div>  
+            </div>
+        </div>                                
+                    
+        <div class="bg-light" id="footer-bottom">
+            <div class="container py-3">
+                <p class="float-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            </div>    
+        </div>
+                    
     </footer>
+                    
 </main>
 

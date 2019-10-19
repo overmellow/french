@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-3">
+        {{ content.user_picture }}    
+    </div>
+    <div class="col-3 py-1 pl-4">
+        <h4><strong>{{ content.field_first_name }} {{ content.field_last_name | render}}</strong></h4>
+        <h5>{{ content.field_title }}</h5>
+        <p>{{ content.field_email }}</p>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-12">
+        <h4>Biography</h4>
+        {{ content.field_biography }}
+    </div>    
+</div>
