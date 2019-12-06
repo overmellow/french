@@ -70,7 +70,7 @@
     </div>
   </nav>#}
     {% if page.main_menu %}
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="main-menu">
 {#      <div class="container-fluid">#}
           {{ page.main_menu }}
 {#      </div>#}
@@ -89,61 +89,83 @@
     </div>
     
     <div class="py-5 bg-light">
-        <div class="container">
+        <div class="container py-5">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="px-2 py-5 bg-success">
-                    <h3>Events</h3>
-                    {{ page.frontpage_one }}
+                {% if drupal_view_result('courses', 'block_1') is not empty %}
+                <div class="col-lg-4">
+                    <div class="px-2 py-5 bg-white">
+                        <h3 class="px-3 pb-3">Featured Courses</h3>
+                        <hr width="92%">
+                        {{ page.frontpage_one }}
                     </div>
-                </div>                
-                <div class="col-md-4">
-                    <div class="px-2 py-5 bg-primary">
-                        <h3>News</h3>
+                </div>
+                {% endif %}
+                {% if drupal_view_result('courses', 'block_1') is not empty %}
+                <div class="col-lg-4">
+                {% else %}
+                <div class="col-lg-6">
+                {% endif %}                
+                    <div class="px-2 py-5 bg-white">
+                        <h3 class="px-3 pb-3">News</h3>
+                        <hr width="92%">
                         {{ page.frontpage_two }}
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="px-2 py-5 bg-dark">
-                        <h3>Featured courses</h3>
-                        {{ page.frontpage_three }}
+                {% if drupal_view_result('courses', 'block_1') is not empty %}
+                <div class="col-lg-4">
+                {% else %}
+                <div class="col-lg-6">
+                {% endif %}       
+                    <div class="px-2 py-5 bg-white">
+                    <h3 class="px-3 pb-3">Events</h3>
+                    <hr width="92%">
+                    {{ page.frontpage_three }}
                     </div>
-                </div>                    
+                </div>
             </div>
         </div>
     </div>
                     
-    <div class="py-5 bg-secondary">
-        <div class="container">
-{#            
-            <div class="row">
-                <div class="col-md-4">
-                </div>                
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4">
-                </div>                    
-            </div>
-#}            
-            <div class="card-deck">
-                <div class="card col-md-4 bg-light rounded-0 mx-5 shadow-sm" style="width: 18rem; height:22rem;">
-                    <div class="card-body">
-                        <h2>Library of French Thought</h2>
-                    </div>
-                </div>
-                <div class="card col-md-4 bg-light rounded-0 mx-5 shadow-sm" style="width: 18rem; height:22rem;">
-                    <div class="card-body">
-                        <h2>Study Abroad</h2>
-                    </div>
-                </div>
-                <div class="card col-md-4 bg-light rounded-0 mx-5 shadow-sm" style="width: 18rem; height:22rem;">
-                    <div class="card-body">
-                        <h2>Books</h2>
-                    </div>
-                </div>
+    <div class="album py-5 bg-light">
+        <div class="container py-3">
+            
+            <div class="row justify-content-md-center">
+                <div class="col-lg-4 py-3 h-100">
+                    <div class="box bg-success transition" id="box-first">                        
+                        <div class="icon">
+                            <i class="fas fa-suitcase fa-3x"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="">French Library of Thought</h3>
+                            <p class="">Graduate Student Instructors (GSI) and Reader Positions listed here.</p>
+                        </div>
+                    </div>    
+                </div>    
+                <div class="col-lg-4 py-3 h-100">
+                    <div class="box bg-info transition" id="box-second">                        
+                        <div class="icon">
+                            <i class="fas fa-users fa-3x"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="">Study Abroad</h3>
+                            <p class="">Donate to American Studies through the Give to Berkeley Website.</p>
+                        </div>
+                    </div>    
+                </div>   
+                <div class="col-lg-4 py-3 h-100">
+                    <div class="box bg-white transition" id="box-third">                        
+                        <div class="icon">
+                            <i class="fas fa-gift fa-3x"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="">Books</h3>
+                            <p class="">Click here to see contact info and office hours for our contact Faculty, Staff and Directors</p>
+                        </div>
+                    </div>    
+                </div>    
             </div>
         </div>
-    </div>                    
+    </div>                  
 
     
 
@@ -173,7 +195,18 @@
                         <h5><button type="button" class="btn btn-outline-secondary btn-lg btn-block rounded-0">Make A Gift</button></h5>
                     </div>
                     <div class="col-sm-4">
-                        <p>Facebook | Twitter</p>                    
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <div class="icon">
+                                    <i class="fab fa-facebook-square fa-3x"></i>
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <div class="icon">
+                                    <i class="fab fa-twitter-square fa-3x"></i>
+                                </div>
+                            </li>
+                        </ul>                         
                     </div>              
                 </div>
             </div> 

@@ -1,5 +1,4 @@
 <?php
-//
-//function french_preprocess_menu__main(&$variables) {
-//    $variables['attributes']['class'][] = 'clearfix alopes';
-//}
+function french_preprocess_menu__main(&$variables) {
+    $variables['attributes']['class'][] = 'clearfix alopes';
+}

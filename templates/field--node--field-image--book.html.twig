@@ -10,4 +10,6 @@
  * @see template_preprocess_image()
  */
 #}
-<img{{ attributes }} class="img-fluid" />
+{% for item in items %}
+    {{ item.content }}
+{% endfor %}

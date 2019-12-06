@@ -3,6 +3,6 @@ global-styling-and-scripts:
     css:
       theme:
         css/style.css: {}
-        css/tempstyle.css: {}
+#        css/tempstyle.css: {}
     js:
         js/script.js: {}

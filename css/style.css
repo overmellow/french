@@ -3,3 +3,135 @@
         max-width: 1400px !important;
     }
 }
+
+.box {
+    background: url("http://localhost/classics/sites/default/files/2019-11/white-paint.png") no-repeat;
+    height: 400px;
+    padding: 110px 50px;
+    text-align: center;
+}
+
+.box:hover {
+    background: url("http://localhost/classics/sites/default/files/2019-11/tower.jpg") no-repeat;
+    color: white;
+}
+
+/* DRY */
+.transition{
+    transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+}
+
+.box .icon {
+    border: 0;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+/*
+main-menu
+*/
+
+#main-menu.transparent {
+    background-color: rgba(28, 28, 28, 0.6) !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.5s ease-out;
+}
+
+#main-menu {
+    background-color: rgba(28, 28, 28, 1) !important;
+/*    padding-top: 10px;
+    padding-bottom: 10px;*/
+    transition: all 0.5s ease-out;
+}
+
+div.dropdown-menu {
+    border-radius: 0;
+    border: 0;
+    transition: all 0.5s ease-out;
+    padding: 0 !important;
+}
+
+nav.transparent div.dropdown-menu {
+    margin-top: 10px !important;    
+    background-color: rgba(28, 28, 28, 0.7) !important;
+}
+
+nav div.dropdown-menu {
+    margin-top: 8px !important;
+    background-color: rgba(28, 28, 28, 1) !important;
+}
+
+.dropdown-item {
+    color: rgba(255, 255, 255, .5) !important;
+    padding: .75rem 2rem .75rem 1.5rem !important;
+}
+
+.dropdown-item:hover {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgba(255, 255, 255, .5) !important;
+}
+
+.dropdown-toggle:after {
+    /*display: none !important;*/
+}
+
+.nav-item.dropdown:hover > .dropdown-menu {
+    /*display: block !important;*/
+}
+
+.side-menu .dropdown:hover .dropdown-menu {
+    /*display: block !important;*/
+}
+
+
+
+a:not(.is-active) + ul.dnone > a:not(.is-active){
+    display:none !important;
+}
+
+a.is-active + ul.dnone {
+    display:block !important;
+}
+
+a.is-active {
+    font-weight: bold;
+}
+
+.bg-berkeley {
+    background-color: #003262;
+}
+
+.header-image-wrapper {
+    position: relative;
+}
+
+.overlay-shade {
+    position: absolute;
+    display: block;
+    max-width: 100%;
+    height: 25%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(52,58,64,0.4);
+    z-index: 2;
+    cursor: pointer;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+    margin: 0;
+}
+
+.overlay-shade-text {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    color: #FFF;
+    font-size:2vw !important;
+    font-weight: 500;
+    line-height: 1.2;
+}

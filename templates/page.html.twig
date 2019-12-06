@@ -70,7 +70,7 @@
     </div>
   </nav>#}
     {% if page.main_menu %}
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="main-menu">
 {#      <div class="container-fluid">#}
           {{ page.main_menu }}
 {#      </div>#}
@@ -79,13 +79,13 @@
 </header>
 
 
-<main role="main">
+<main role="main" class="mt-5">
     
     <p class="h1">
         {{ page.header }}
     </p>
     
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col col-lg-9">
                 {{ page.content }}
