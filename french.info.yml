@@ -12,19 +12,23 @@ libraries:
 regions:
   header: 'Header'
   main_menu: 'Main menu'
+  frontpage_carousel: 'Front Page Carousel'
+  frontpage_announcement: 'Front Page Announcement'
+  frontpage_one: 'Front Page One'
+  frontpage_two: 'Front Page Two'
+  frontpage_three: 'Front Page Three'
+  quote_of_the_day: 'Quote of the Day'
   content: 'Content'
   sidebar_first: 'Sidebar first'
   footer_one: 'Footer One'
   footer_two: 'Footer Two'
   footer_three: 'Footer Three'
   footer_four: 'Footer Four'
-  frontpage_carousel: 'Front Page Carousel'
-  frontpage_announcement: 'Front Page Announcement'
-  frontpage_one: 'Front Page One'
-  frontpage_two: 'Front Page Two'
-  frontpage_three: 'Front Page Three'
   
 # Information added by Drupal.org packaging script on 2017-12-18
 version: '8.x-1.1'
 project: 'french'
 datestamp: 1513574901  
+
+dependencies:
+  - twig_tweak
