@@ -1,17 +1,54 @@
-<div class="row">
-    <div class="col-3">
-        {{ content.user_picture }}    
+<div class="py-4">
+    <div class="row">
+        <div class="col-3">
+            {{ content.user_picture }}    
+        </div>
+        <div class="col-9 py-1 pl-4">
+            <h4><strong>{{ content.field_full_name| render }}</strong></h4>
+            <h5 class="text-muted">{{ content.field_title }}</h5>           
+            <div><i class="fas fa-envelope fa-lg" title="Email"></i>{{ content.field_email }}</div>
+            <div class="row">
+                <div class="col-6">
+                    <i class="fas fa-building fa-lg" title="Office"></i>{{ content.field_office }}
+                    {{ content.user_roles }}
+                </div>
+                <div class="col-6">
+                    <i class="fas fa-clock fa-lg" title="Office Hours"></i>{{ content.field_office_hours }}
+                </div>
+            </div>    
+        </div>
     </div>
-    <div class="col-3 py-1 pl-4">
-        <h4><strong>{{ content.field_first_name }} {{ content.field_last_name | render}}</strong></h4>
-        <h5>{{ content.field_title }}</h5>
-        <p>{{ content.field_email }}</p>
-    </div>
-</div>
-<hr>
-<div class="row">
-    <div class="col-12">
-        <h4>Biography</h4>
-        {{ content.field_biography }}
+    <hr>    
+    <div class="row">
+        <div class="col-12">
+            <h4>Research Areas</h4>
+            {{ content.field_research_areas }}
+        </div>
     </div>    
-</div>
+    <hr>
+    <div class="row">    
+        <div class="col-12">
+            <h4>Biography</h4>
+            {{ content.field_biography }}
+        </div>    
+    </div>
+    <hr>
+    <div class="row">    
+        <div class="col-12">
+            <h4>Publications</h4>
+            {{ content.field_publications }}
+        </div>    
+    </div>
+    {% if content.field_books |length > 2 %}        
+    <hr>    
+    <div class="row mb-5">    
+        <div class="col-12" id="author">
+            <h4>Books</h4>
+            {{content.field_books }}
+            {#{% for book in content.field_books %}
+                <li>{{ book|render }}</li>
+            {% endfor %}#}
+        </div>        
+    </div>
+    {% endif %}        
+</div>    
