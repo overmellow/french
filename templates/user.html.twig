@@ -39,7 +39,8 @@
             {{ content.field_publications }}
         </div>    
     </div>
-    {% if content.field_books |length > 2 %}        
+            <h1>{{ content.field_books |length }}</h1>
+    {% if content.field_books |length %}        
     <hr>    
     <div class="row mb-5">    
         <div class="col-12" id="author">

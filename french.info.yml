@@ -24,6 +24,9 @@ regions:
   footer_two: 'Footer Two'
   footer_three: 'Footer Three'
   footer_four: 'Footer Four'
+  profile_books: 'Profile Books'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
   
 # Information added by Drupal.org packaging script on 2017-12-18
 version: '8.x-1.1'
