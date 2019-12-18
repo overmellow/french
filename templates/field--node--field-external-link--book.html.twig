@@ -69,19 +69,14 @@
   </div>
 {% endif %}#}
 <div class="row">
-    <div class="col-1 mr-2">
-        <p>Author(s):</p>
-    </div>
-    <div class="col-10">
+    <div class="col">
+        <p>External Link:
 {#    <ul class="col-10 list-inline">#}
 {% for item in items %}
 {#    <li class="list-inline-item">#}
     {{ item.content }} 
 {#    </li>#}
-    {% if not loop.last %}
-        <span>,</span> 
-    {% endif %}
 {% endfor %}    
-{#    </ul>#}
+{#    </ul>#}</p>
     </div>
 </div>

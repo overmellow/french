@@ -39,8 +39,7 @@
             {{ content.field_publications }}
         </div>    
     </div>
-            <h1>{{ content.field_books |length }}</h1>
-    {% if content.field_books |length %}        
+    {% if content.field_books is not empty %}
     <hr>    
     <div class="row mb-5">    
         <div class="col-12" id="author">
@@ -51,5 +50,5 @@
             {% endfor %}#}
         </div>        
     </div>
-    {% endif %}        
+    {% endif %}
 </div>    

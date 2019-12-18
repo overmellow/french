@@ -82,32 +82,100 @@
 </header>
 
 
-<main role="main" class="mt-5">
+<main role="main">
     
-    <p class="h1">
-        {{ page.header }}
-    </p>
+    <div class="" style="margin-top: 80px">
+        {% if page.header %}
+        <div class="h1">
+            {{ page.header }}
+        </div>
+        {% endif %}  
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    {{ page.content }}
+                </div>                  
+                <div class="col-lg-3">
+                    {{ page.sidebar_first }}
+                </div>  
+            </div>                      
+        </div>
+    </div>  
     
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col col-lg-9">
-                {{ page.content }}
-            </div>  
-            <div class="col col-md-3">
-                {{ page.sidebar_first }}
-            </div>  
-        </div>                      
-    </div>    
-    
-    {% if page.footer %} 
-    <footer class="container">
-    
-        {{ page.footer }}
-    <!--  
-      <p class="float-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    -->
+<!-- end of fifth banner -->
+    <footer class="" id="footer">
+        
+        <div class="bg-pacific" id="footer-top">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <p>Subscribe to<br>
+                            Our Email List<p>
+                            </div>
+                            <div class="col-8">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control rounded-0" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-secondary rounded-0" type="button">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>                            
+                    </div>
+                    <div class="col-sm-4">
+                        <h5><button type="button" class="btn btn-outline-secondary btn-lg btn-block rounded-0">Make A Gift</button></h5>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <div class="icon">
+                                    <i class="fab fa-facebook-square fa-3x"></i>
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <div class="icon">
+                                    <i class="fab fa-twitter-square fa-3x"></i>
+                                </div>
+                            </li>
+                        </ul>                         
+                    </div>              
+                </div>
+            </div> 
+        </div>
+        
+        <div class="bg-berkeley" id="footer-middle">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p class="text-white" style="font-size: 20px;">French Department<br>
+                        4125 Dwinelle Hall<br>
+                        University of California, Berkeley<br> 
+                        Berkeley, CA 94720-2580<br>
+                        Phone: (510) 642-2712<br> 
+                        Fax: (510) 642-8852<br>
+                        Email: clfa_aa@berkeley.edu</p>
+                    </div>
+                    <div class="col-sm-5">
+                        {{ page.footer_two }}
+                    </div>
+                    <div class="col-sm-3">
+                        <div id="berkeley-text-logo">
+                            <img src="https://as.ugis.berkeley.edu/wp-content/uploads/2018/09/UCBerkeley_wordmark_white.png" alt="berkeley logo" width="200">
+                        </div>                    
+                    </div>              
+                </div>  
+            </div>
+        </div>                                
+                    
+        <div class="bg-berkeley-dark" id="footer-bottom">
+            <div class="container py-3">
+                <p class="float-right"><a href="#" class="text-decoration-none text-white" >Back to top</a></p>
+                <p class="text-white">&copy; 2017-2019 Company, Inc. &middot; <a class="text-decoration-none text-white" href="#">Privacy</a> &middot; <a class="text-decoration-none text-white" href="#">Terms</a></p>
+            </div>    
+        </div>
+                    
     </footer>
-    {% endif %}
 </main>
 

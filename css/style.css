@@ -118,8 +118,22 @@ a.is-active {
     font-weight: bold;
 }
 
-.bg-berkeley {
+.bg-berkeley-dark {
     background-color: #003262;
+}
+
+.bg-berkeley {
+    background-color: #063F75;
+}
+
+.bg-pacific {
+    background-color: #46535E;
+}
+.bg-web-grey {
+    background-color: #888888;
+}
+.bg-grey {
+    background-color: #EEEEEE;
 }
 
 .header-image-wrapper {
