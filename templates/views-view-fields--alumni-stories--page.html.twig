@@ -59,10 +59,17 @@
 <div class="col-sm-10 py-1 pl-4">
     <div class="row">
         <div class="col-12">
-            <h5 class="text-decoration-none">{{ fields.title.content }}</h5>
-        </div>            
-        <div class="col-12">
-            Author(s): {{ fields.field_author.content }}
+            <h5>{{ fields.title.content }}</h5>
         </div>
+        {% if fields.body.content %}
+        <div class="col-12">
+            {{ fields.body.content }}
+        </div>        
+        {% endif %}
+        {% if fields.field_email %}
+        <div class="col-12">
+            <i class="fas fa-lg fa-envelope-square"></i> {{ fields.field_email.content }}
+        </div>
+        {% endif %}
     </div>
 </div>

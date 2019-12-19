@@ -23,13 +23,19 @@
 {% if view.title %}
 <h1>{{ view.title }}</h1>
 {% endif %}
+<div class="py-3">
 {% for row in rows %}
   {%
     set row_classes = [
-      default_row_class ? 'views-row', 'mb-3'
+      default_row_class ? 'views-row',
+      'row'
     ]
   %}
-  <div{{ row.attributes.addClass(row_classes) }}>
-    {{- row.content -}}
-  </div>
+    <div{{ row.attributes.addClass(row_classes) }}>
+      {{ row.content }}
+    </div>
+    {% if loop.last == false %}           
+    <hr>  
+    {% endif %}    
 {% endfor %}
+</div>

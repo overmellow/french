@@ -59,7 +59,7 @@
 <div class="col-sm-9 py-1 pl-4">
     <div class="row">
         <div class="col-12">
-            <h4><strong>{{ fields.field_first_name.content }} {{ fields.field_last_name.content }}</strong></h4>
+            <h4 class="text-capitalize font-weight-bold">{{ fields.field_first_name.content }} {{ fields.field_last_name.content }}</h4>
             <h5 class="text-muted">{{ fields.field_title.content }}</h5>
             {% if 'Department Chair' in fields.roles_target_id.content|render %}
             <h5>Department Chair</h5>
