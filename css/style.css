@@ -5,15 +5,26 @@
 }
 
 .box {
-    background: url("http://localhost/classics/sites/default/files/2019-11/white-paint.png") no-repeat;
+    /*background: url("../images/white-paint.png") no-repeat;*/
     height: 400px;
     padding: 110px 50px;
     text-align: center;
 }
 
 .box:hover {
-    background: url("http://localhost/classics/sites/default/files/2019-11/tower.jpg") no-repeat;
     color: white;
+}
+
+.box.box-library:hover {
+    background: url("../images/library.jpg") no-repeat;
+}
+
+.box.box-books:hover {
+    background: url("../images/eiffel.jpg") no-repeat;
+}
+
+.box.box-study-abroad:hover {
+    background: url("../images/study-abroad.jpg") no-repeat;
 }
 
 /* DRY */
@@ -135,6 +146,19 @@ a.is-active {
 .bg-grey {
     background-color: #EEEEEE;
 }
+.bg-founders-rock {
+    background-color: #3B7EA1;
+}
+.bg-lap-lane {
+    background-color: #00A598;
+}
+.bg-soybean {
+    background-color: #859438;
+}
+.bg-golden-gate{
+    background-color: #ED4E33;
+}
+
 
 .header-image-wrapper {
     position: relative;
